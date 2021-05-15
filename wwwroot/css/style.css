@@ -1,0 +1,143 @@
+html { 
+    height: 100%; 
+}
+
+.mt-3:hover {
+    cursor: pointer;
+}
+
+.fa-city {
+    display: none;
+}
+
+.video {
+    position: fixed;
+    top: 24%;
+    left: 20%;
+    box-shadow: 5px 5px 50px 50px rgb(49, 22, 22);
+    border: 6px solid black;
+}
+
+.mt-3:hover {
+    cursor: pointer;
+}
+
+.name {
+    position: fixed;
+    border-radius: 5px;
+    top: 13%;
+    left: 40%;
+    color: rgb(0, 0, 0);
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+    background-color: rgb(255, 219, 219);
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: inset 5px 10px 20px white,10px 10px 55px 10px rgb(255, 236, 162);
+}
+
+.map {
+    position: fixed;
+    bottom: 2%;
+    right: 1%;
+    width: 300px;
+    height: 225px;
+    border-radius: 5px;
+}
+
+.close {
+    position: fixed;
+    top: 12%;
+    left: 72%;
+}
+
+.fa-city {
+    display: none;
+}
+
+.flag {
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/*responsive tasarým olmasý için media screen kýsmý kullanýlmýþtýr.*/
+@media screen and (max-width: 700px) {
+  .video {
+    position: fixed;
+    top: 20%;
+    left: 4%;
+    width: 340px;
+    height: 360px;
+}
+.map {
+  position: fixed;
+    bottom: 1%;
+    right: 1%;
+    width: 150px;
+    height: 130px;
+}
+
+.close {
+  position: fixed;
+  top: 8%;
+  left: 75%;
+}
+.name {
+  position: fixed;
+  top: 10%;
+  left: 4%;
+  height: 50px;
+  width:50px;
+} 
+}
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px){
+  .video {
+    position: fixed;
+    top: 18%;
+    left: 4%;
+    width: 680px;
+    height: 580px;
+}
+.map {
+  position: fixed;
+  bottom: 2%;
+  right: 1%;
+  width: 300px;
+  height: 225px;
+  border-radius: 5px;
+}
+
+.close {
+  position: fixed;
+  top: 10%;
+  left: 77%;
+}
+.name {
+  position: fixed;
+  top: 10%;
+  left: 7%;
+  height: 60px;
+  width:60px;
+}
+    
+}
+
+footer{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contact{
+    background-color:red;
+    opacity: 0.4;
+}
+
+#cont{
+    background-color:fuchsia;
+}
+
+div.contact{
+    background-color:darkslateblue;
+}
+

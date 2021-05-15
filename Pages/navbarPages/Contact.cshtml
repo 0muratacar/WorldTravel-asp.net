@@ -1,0 +1,46 @@
+﻿@page
+@model RndWorldCity.Pages.navbarPages.ContactModel
+@{
+    ViewData["Title"] = "Contact";
+
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/aboutUs.css">
+</head>
+
+<div class="main_div bg-dark">
+    <h1 class="baslik">Bize Ulaşın</h1>
+
+    <ul style="list-style-type: none;padding-right: 40px;padding-left: 30px">
+        <li class="kisi" id="mail">
+            <hr><br>
+            <form action="" method="post" class="contact-form">
+                <div class="align-items-center">
+                    <div style="float:right" class="col-6 form-group">
+                        <input class="email form-control" type="email" placeholder="E-mail"
+                               id="email" required />
+                    </div>
+                    <div class="col-6 form-group">
+                        <input class="username form-control" type="text" placeholder="Ad Soyad" id="username"
+                               required />
+                    </div>
+
+                    <div class="col-md-12 form-group">
+
+                        <textarea class="message form-control" name="message" rows="7" placeholder="Mesajınız"
+                                  id="message" required></textarea>
+
+                    </div>
+                    <div class="col-md-12    form-group">
+                        <button type="submit" class="btn btn-primary form-control">Mesaj Gönder</button>
+                    </div>
+                </div>
+            </form>
+            <script src="~/js/send-mail.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+        </li>
+    </ul>
+
+</div>

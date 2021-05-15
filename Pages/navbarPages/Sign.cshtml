@@ -1,0 +1,55 @@
+﻿@page
+@model WorldTravel.Pages.navbarPages.SignModel
+@{
+    ViewData["Title"] = "Sign";
+
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/sign.css">
+</head>
+
+<div class="main_div bg-dark">
+    <h1 class="baslik">Kaydol</h1>
+    <hr /><br />
+
+        <form method="post">
+            <div class="form-row p-3 mr-2">
+                <!--asp-for ile-->
+                <!--menü için control space yap-->
+                <!--kullanicidan kayit aldııgm ekran-->
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Ad giriniz." required asp-for="UserData.Ad" />
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Soyad giriniz." required asp-for="UserData.Soyad" />
+                </div>
+                <div class="col">
+                    <input type="email" class="form-control" placeholder="E-posta adresi giriniz." required asp-for="UserData.Eposta" />
+                    <div id="emailHelp" class="form-text" style="color:white">E-postanızı asla başkalarıyla paylaşmayacağız.</div>
+                </div>
+            </div>
+
+            <div class="form-row p-3 mr-2">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="İl giriniz." required asp-for="UserData.Address.Il" />
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="İlçe giriniz." required asp-for="UserData.Address.Ilce" />
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Posta Kodu giriniz." asp-for="UserData.Address.PostaKodu" />
+                </div>
+            </div>
+            <div class="form-row p-3 mr-2">
+
+                <div class="col-md-12">
+                    <input type="text" class="form-control" placeholder="Detaylı Adres Giriniz." required asp-for="UserData.Address.Detay" />
+                </div>
+            </div>
+            <div class="col mb-3 mt-3">
+                <input type="submit" class="btn btn-info p-2" value="Kayit Ol">
+            </div>
+
+        </form>
+</div>
