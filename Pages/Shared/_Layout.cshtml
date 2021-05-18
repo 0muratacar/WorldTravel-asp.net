@@ -40,11 +40,23 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a href="/Index" class="nav-link">
-                        RndWorldCity&nbsp<img src="~/img/radio-station.png"
-                                              style="height: 20px;" class="mb-2">
+                        RndWorldCity&nbsp<img src="~/img/radio-station.png" style="height: 20px;" class="mb-2">
                     </a>
                 </li>
-                <li class="nav-item"><a href="/NavbarPages/AboutUs" class="nav-link">AboutUs&nbsp<i class="fas fa-users"></i></a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tasks</a>
+                    <div class="dropdown-menu" style="background-color:rosybrown">
+                        <!-- Hafta 9 projede de kullanmak istediğimiz yapı olduğundan navbarPages içine alındı -->
+                        <!-- Diğer ödevleri navbarPages-tasks altına koyalım -->
+                        <a class="dropdown-item" href="/NavbarPages/Sign">Week 9</a>
+                        <a class="dropdown-item" href="/NavbarPages/tasks/week10">Week 10</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">-</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="/NavbarPages/AboutUs" class="nav-link">AboutUs&nbsp<i class="fas fa-users"></i></a>
+                </li>
                 <li class="nav-item">
                     <a href="/NavbarPages/Contact" class="nav-link">Contact&nbsp<i class="fas fa-phone-volume"></i></a>
                 </li>
