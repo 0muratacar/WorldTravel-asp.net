@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WorldTravel.Services;
 
 namespace WorldTravel
 {
@@ -24,6 +25,7 @@ namespace WorldTravel
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddTransient<JsonWikiService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
