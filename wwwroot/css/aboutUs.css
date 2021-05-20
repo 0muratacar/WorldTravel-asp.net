@@ -4,17 +4,19 @@ body {
     color: aliceblue;
 }
 
-
 .active {
     background-color: #4CAF50;
 }
 
-#baslik {
-    color: cadetblue;
-}
 .baslik {
     text-align: center;
     color: #8484ff;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+p.baslik {
+    text-align: center;
+    color: red;
     margin-bottom: 50px;
     margin-top: 20px;
 }
@@ -90,4 +92,5 @@ i {
     i:hover {
         color: aliceblue;
     }
+
 

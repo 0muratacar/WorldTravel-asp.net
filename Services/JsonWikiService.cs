@@ -10,15 +10,23 @@ namespace WorldTravel.Services
 {
     public class JsonWikiService
     {
-        public string GetWikiModel (string term)
+        public WikiModel GetWikiModel (string term)
         {
-            string url = string.Concat("https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=",term);
+            // Aramasını istediğimiz term değişkenini alıp url çevirip url adlı stringe atıyoruz..
+            string url = string.Concat("https://tr.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=",term);
 
+            // Bu url İ indirip json adlı stringe atıyoruz.
             string json = new WebClient().DownloadString(url);
 
+            // İndirilen json metnini wikiModelimize çeviriyoruz. Seri hale getiriyoruz. Ve bunu wikidata adlı değişkende tutuyoruz.
             WikiModel wikidata = JsonSerializer.Deserialize<WikiModel>(json);
 
-            return url;
+            return wikidata;
+
+            /*
+             * return JsonSerializer.Deserialize<WikiModel>(json); de diyebilirdik 22-24. satırları silip.
+             * 
+            */
         }
     }
 }
