@@ -12,15 +12,16 @@ namespace WorldTravel.Pages.navbarPages.tasks
 {
     public class week10Model : PageModel
     {
+        public JsonWikiService JsonWikiService;
+
         private readonly ILogger<week10Model> _logger;
 
-        public week10Model(ILogger<week10Model> logger, JsonWikiService jsonservice)
+        public week10Model(ILogger<week10Model> logger, JsonWikiService jsonwikiservice)
         {
             _logger = logger;
-            JsonService = jsonservice;
+            JsonWikiService = jsonwikiservice;
         }
 
-        public JsonWikiService JsonService;
 
         public WikiModel wikidata;
 
@@ -36,7 +37,7 @@ namespace WorldTravel.Pages.navbarPages.tasks
         public void OnPost()
         {
             Console.WriteLine(Term);
-            wikidata = JsonService.GetWikiModel(Term);
+            wikidata = JsonWikiService.GetWikiModel(Term);
 
             Extract = ExtractData(wikidata);
         }

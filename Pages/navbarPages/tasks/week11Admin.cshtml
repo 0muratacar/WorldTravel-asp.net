@@ -1,0 +1,34 @@
+﻿@page
+@model WorldTravel.Pages.navbarPages.tasks.week11AdminModel
+@{
+}
+
+<!--"id": 2,
+    "projectName": "Abc Project",
+    "projectDescription": "Abc Desc",
+    "img": "",
+    "url": "https://google.com/",
+    "uyes": [ "Ford", "BMW", "Fiat" ]-->
+<div class="main_div bg-dark mt-4">
+
+    <form method="post">
+        <div class="form-row ">
+
+            <div class="col-3">
+                <input type="text" class="form-control"  placeholder="ID otomatik atanır."  asp-for="Proje.id" readonly />
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="Proje ismini giriniz." required asp-for="Proje.projectName" />
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Proje açıklamasını giriniz." required asp-for="Proje.projectDescription" />
+            </div>
+        </div>
+
+        <div class="col mb-3 mt-3">
+            <input type="submit" class="btn btn-info p-2" value="Kayit Ol">
+        </div>
+
+    </form>
+
+</div>

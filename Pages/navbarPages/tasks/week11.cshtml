@@ -1,0 +1,46 @@
+﻿@page
+@model WorldTravel.Pages.navbarPages.tasks.week11Model
+@{
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/aboutUs.css">
+</head>
+
+@if (Model.Status)
+{ 
+<div class="alert alert-success" role="alert">
+    Proje Json Dosyasına Yazıdırıldı :)
+</div>
+} 
+
+
+<div class="main_div bg-dark">
+    <h3 class="text-center"> Json dosyası işleme </h3>
+
+    <div class="card-group">
+        @foreach (var project in Model.Projects)
+        {
+            <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">Takım Adı: @project.projectName</div>
+                <div class="card-body">
+                    <h5 class="card-title">Proje id: @project.id</h5>
+                    <p class="card-text">Proje açıklaması: @project.projectDescription.</p>
+                </div>
+                <div class="card-footer">
+                    <ul class="list-group">
+                        <p style="color:black">Takım Üyeleri</p>
+                        @foreach (string uye in project.members)
+                        {
+                            <li class="list-group">@uye</li>
+                        }
+
+
+                    </ul>
+                </div>
+            </div>
+        }
+    </div>
+
+
+</div>
