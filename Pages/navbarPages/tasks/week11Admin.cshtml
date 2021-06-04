@@ -2,6 +2,9 @@
 @model WorldTravel.Pages.navbarPages.tasks.week11AdminModel
 @{
 }
+<head>
+    <link rel="stylesheet" href="~/css/aboutUs.css">
+</head>
 
 <!--"id": 2,
     "projectName": "Abc Project",
@@ -12,7 +15,10 @@
 <div class="main_div bg-dark mt-4">
 
     <form method="post">
-        <div class="form-row ">
+        <br>
+        <h1 class="baslik">Proje Giriş Sayfası</h1>
+        <hr />
+        <div class="form-row p-4 mr-3 ">
 
             <div class="col-3">
                 <input type="text" class="form-control"  placeholder="ID otomatik atanır."  asp-for="Proje.id" readonly />
