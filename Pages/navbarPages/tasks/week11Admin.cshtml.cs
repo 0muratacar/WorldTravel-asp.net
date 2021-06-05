@@ -24,12 +24,16 @@ namespace WorldTravel.Pages.navbarPages.tasks
         public void OnGet()
         {
         }
-        public IActionResult OnPost()
+        public IActionResult OnPostAddProjectForm()
         {
 
             JsonProjectService.AddProject(Proje);
             return RedirectToPage("/NavbarPages/tasks/week11", new { Status = true });
 
+        }
+        public void OnPostSearchProjectForm()
+        {
+            Proje = JsonProjectService.GetProjectById(Proje.id);
         }
     }
 }

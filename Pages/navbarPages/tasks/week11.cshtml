@@ -5,6 +5,7 @@
 
 <head>
     <link rel="stylesheet" href="~/css/aboutUs.css">
+    <script src="~/js/site.js"></script>
 </head>
 
 @if (Model.Status)
@@ -31,10 +32,14 @@
                 <div class="card-footer">
                     <ul class="list-group">
                         <p style="color:black">Takım Üyeleri</p>
-                        @foreach (string uye in project.members)
+                        @if (project.members != null)
                         {
-                            <li class="list-group">@uye</li>
+                            @foreach (string uye in project.members)
+                            {
+                                <li class="list-group">@uye</li>
+                            }
                         }
+
 
 
                     </ul>

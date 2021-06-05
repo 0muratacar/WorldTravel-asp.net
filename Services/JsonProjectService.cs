@@ -40,14 +40,26 @@ namespace WorldTravel.Services
         {
             var projects = GetProjects();
             newproject.id = projects.Max(x => x.id) + 1;
+
             var temp = projects.ToList();
+            temp.Add(newproject);
             IEnumerable<ProjectModel> updatedprojects = temp.ToArray();
 
             using var json = File.OpenWrite(JsonFileName);
+
+
             JsonSerializer.Serialize<IEnumerable<ProjectModel>>
                 (
                 new Utf8JsonWriter(json, new JsonWriterOptions { Indented=true}), updatedprojects
                 );
+        }
+
+        public ProjectModel GetProjectById(int id)
+        {
+            var project = GetProjects();
+
+            ProjectModel query = project.FirstOrDefault(x => x.id == id);
+            return query;
         }
     }
 }
