@@ -14,7 +14,7 @@ namespace WorldTravel.Pages.navbarPages.tasks
     {
 
         [BindProperty(SupportsGet = true)]
-        public bool Status { get; set; }
+        public string Status { get; set; }
 
         private readonly ILogger<week11Model> _logger;
 

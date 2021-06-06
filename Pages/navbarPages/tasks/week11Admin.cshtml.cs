@@ -21,19 +21,54 @@ namespace WorldTravel.Pages.navbarPages.tasks
 
         [BindProperty]
         public ProjectModel Proje { get; set; }
+
+        [BindProperty]
+        public string MemberList { get; set; }
+
         public void OnGet()
         {
         }
         public IActionResult OnPostAddProjectForm()
         {
-
+            Proje.members = stringtolist(MemberList);
             JsonProjectService.AddProject(Proje);
             return RedirectToPage("/NavbarPages/tasks/week11", new { Status = true });
 
         }
+
         public void OnPostSearchProjectForm()
         {
             Proje = JsonProjectService.GetProjectById(Proje.id);
+            if(Proje != null)
+            {
+                MemberList = listtostring(Proje.members);
+            }
         }
+
+        public string[] stringtolist(string MemberList) {
+            if( MemberList != null)
+            {
+                string[] lines = MemberList.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+                return lines;
+            }
+            return Array.Empty<string>();
+        }
+        public string listtostring(string[] MemberList) {
+            return string.Join(Environment.NewLine, MemberList);
+        }
+
+        public IActionResult OnPostDeleteProjectByID()
+        {
+            if(Proje.id != 0)
+            {
+                JsonProjectService.DeleteProject(Proje.id);
+                return RedirectToPage("/NavbarPages/tasks/week11", new { Status = true });
+            }
+            else
+                return RedirectToPage("/NavbarPages/tasks/week11", new { Status = "DeleteError" });
+
+        }
+
+
     }
 }

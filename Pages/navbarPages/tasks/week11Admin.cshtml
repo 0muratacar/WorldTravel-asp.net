@@ -25,9 +25,9 @@
 
     </form>
 
-    <form method="post" asp-page-handler="AddProjectForm">
+    <form method="post" id="projectForm" class="p-4 mr-3" asp-page-handler="AddProjectForm">
 
-        <div class="form-row p-4 mr-3 ">
+        <div class="form-row ">
 
             <div class="col-3">
                 <input type="text" class="form-control" placeholder="ID otomatik atanır." asp-for="Proje.id" readonly />
@@ -38,8 +38,12 @@
             <div class="col-6">
                 <input type="text" class="form-control" placeholder="Proje açıklamasını giriniz." required asp-for="Proje.projectDescription" />
             </div>
-            <button type="submit" class="btn btn-success mt-3">Ekle</button>
         </div>
+        <div class="form-row mt-2 mb-2">
+            <textarea class="form-control" id="projecForm" asp-for="MemberList" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success mt-3">Oluştur</button>
+        <button type="submit" class="btn btn-success mt-3" asp-page-handler="DeleteProjectByID">Sil</button>
 
 
     </form>

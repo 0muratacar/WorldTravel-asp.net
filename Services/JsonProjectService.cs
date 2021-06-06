@@ -61,5 +61,41 @@ namespace WorldTravel.Services
             ProjectModel query = project.FirstOrDefault(x => x.id == id);
             return query;
         }
+
+        public void UpdateProject(ProjectModel newproject)
+        {
+            var project = GetProjects();
+            ProjectModel query = project.FirstOrDefault(x => x.id == newproject.id);
+
+            if(query != null)
+            {
+                var temp = project.ToList();
+                temp[temp.IndexOf(query)] = newproject;
+
+                IEnumerable<ProjectModel> updatedprojects = temp.ToArray();
+                JsonWrite(updatedprojects);
+            }
+   
+
+        }
+        public void DeleteProject(int id)
+        {
+            var project = GetProjects();
+            ProjectModel query = project.Single(x => x.id == id);
+
+            var temp = project.ToList();
+            temp.Remove(query);
+            IEnumerable<ProjectModel> updatedprojects = temp.ToArray();
+            JsonWrite(updatedprojects);
+        }
+        public void JsonWrite(IEnumerable<ProjectModel> project)
+        {
+            using var json = File.Create(JsonFileName);
+            JsonSerializer.Serialize<IEnumerable<ProjectModel>>
+                (
+                new Utf8JsonWriter(json, new JsonWriterOptions { Indented = true }), project
+                );
+        }
+
     }
 }

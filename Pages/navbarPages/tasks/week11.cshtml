@@ -8,12 +8,18 @@
     <script src="~/js/site.js"></script>
 </head>
 
-@if (Model.Status)
+@if (Model.Status == "True")
 { 
 <div class="alert alert-success" role="alert">
     Proje Json Dosyasına Yazıdırıldı :)
 </div>
-} 
+}
+else if(Model.Status == "DeleteError")
+{ 
+<div class="alert alert-success" role="alert">
+    Silme işlemi başarısız :(
+</div>
+}
 
 
 <div class="main_div bg-dark">
@@ -23,7 +29,7 @@
     <div class="card-group justify-content-center">
         @foreach (var project in Model.Projects)
         {
-            <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+            <div class="card text-white bg-info m-3" style="max-width: 18rem;">
                 <div class="card-header">Takım Adı: @project.projectName</div>
                 <div class="card-body">
                     <h5 class="card-title">Proje id: @project.id</h5>
