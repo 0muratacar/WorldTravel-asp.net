@@ -39,7 +39,16 @@ namespace WorldTravel.Services
         public void AddProject(ProjectModel newproject)
         {
             var projects = GetProjects();
-            newproject.id = projects.Max(x => x.id) + 1;
+
+            if (projects != null)
+            {
+                newproject.id = projects.Max(x => x.id) + 1;
+
+            }
+            else
+            {
+                newproject.id = 1;
+            }
 
             var temp = projects.ToList();
             temp.Add(newproject);
@@ -50,7 +59,7 @@ namespace WorldTravel.Services
 
             JsonSerializer.Serialize<IEnumerable<ProjectModel>>
                 (
-                new Utf8JsonWriter(json, new JsonWriterOptions { Indented=true}), updatedprojects
+                new Utf8JsonWriter(json, new JsonWriterOptions { Indented = true }), updatedprojects
                 );
         }
 
@@ -67,7 +76,7 @@ namespace WorldTravel.Services
             var project = GetProjects();
             ProjectModel query = project.FirstOrDefault(x => x.id == newproject.id);
 
-            if(query != null)
+            if (query != null)
             {
                 var temp = project.ToList();
                 temp[temp.IndexOf(query)] = newproject;
@@ -75,7 +84,7 @@ namespace WorldTravel.Services
                 IEnumerable<ProjectModel> updatedprojects = temp.ToArray();
                 JsonWrite(updatedprojects);
             }
-   
+
 
         }
         public void DeleteProject(int id)
@@ -99,3 +108,4 @@ namespace WorldTravel.Services
 
     }
 }
+

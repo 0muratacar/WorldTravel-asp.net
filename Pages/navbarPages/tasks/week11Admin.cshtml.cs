@@ -31,8 +31,18 @@ namespace WorldTravel.Pages.navbarPages.tasks
         public IActionResult OnPostAddProjectForm()
         {
             Proje.members = stringtolist(MemberList);
-            JsonProjectService.AddProject(Proje);
-            return RedirectToPage("/NavbarPages/tasks/week11", new { Status = true });
+            if (Proje.id == 0)
+            {
+                JsonProjectService.AddProject(Proje);
+                return RedirectToPage("/NavbarPages/tasks/week11", new { Status = "AddSuccess" });
+
+            }
+            else
+            {
+                JsonProjectService.UpdateProject(Proje);
+                return RedirectToPage("/NavbarPages/tasks/week11", new { Status = "UpdateSuccess" });
+
+            }
 
         }
 
@@ -62,10 +72,14 @@ namespace WorldTravel.Pages.navbarPages.tasks
             if(Proje.id != 0)
             {
                 JsonProjectService.DeleteProject(Proje.id);
-                return RedirectToPage("/NavbarPages/tasks/week11", new { Status = true });
+                return RedirectToPage("/NavbarPages/tasks/week11", new { Status = "DeleteError" });
+
             }
             else
-                return RedirectToPage("/NavbarPages/tasks/week11", new { Status = "DeleteError" });
+            {
+                return RedirectToPage("/NavbarPages/tasks/week11", new { Status = true });
+            }
+
 
         }
 

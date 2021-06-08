@@ -18,55 +18,19 @@
     "members": [
       "Ford",
       "BMW",
-      "Fiat"
+      "Fiat bee"
     ],
-    "img": "",
-    "url": "https://worldtravel.azurewebsites.net/"
+    "img": null,
+    "url": null
   },
   {
     "id": 3,
     "projectName": "proje ismi 3",
     "projectDescription": "proje a\u00E7\u0131klamas\u01313",
     "members": [
-      "mehmet kaban",
-      "ahmet \u00F6zt\u00FCrk",
-      "murat acar"
-    ],
-    "img": null,
-    "url": null
-  },
-  {
-    "id": 4,
-    "projectName": "proje ismi 3",
-    "projectDescription": "proje a\u00E7\u0131klamas\u01313",
-    "members": [
-      "mehmet kaban",
-      "ahmet \u00F6zt\u00FCrk",
-      "murat acarr"
-    ],
-    "img": null,
-    "url": null
-  },
-  {
-    "id": 5,
-    "projectName": "WorldTravel",
-    "projectDescription": "WT Desc",
-    "members": [
-      "Ford",
-      "BMW",
-      "toyoyo"
-    ],
-    "img": null,
-    "url": null
-  },
-  {
-    "id": 6,
-    "projectName": "proje ismi 3",
-    "projectDescription": "proje a\u00E7\u0131klamas\u01313",
-    "members": [
-      "mehmet kaban",
-      "ahmet \u00F6zt\u00FCrk",
-      "murat acar"
+      "ali",
+      "veli",
+      "ads"
     ],
     "img": null,
     "url": null

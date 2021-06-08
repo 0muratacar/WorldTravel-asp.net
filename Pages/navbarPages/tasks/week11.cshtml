@@ -8,17 +8,23 @@
     <script src="~/js/site.js"></script>
 </head>
 
-@if (Model.Status == "True")
-{ 
-<div class="alert alert-success" role="alert">
-    Proje Json Dosyasına Yazıdırıldı :)
-</div>
+@if (Model.Status == "AddSuccess")
+{
+    <div class="alert alert-success" role="alert">
+        Proje Json Dosyasına Eklendi :)
+    </div>
 }
-else if(Model.Status == "DeleteError")
-{ 
-<div class="alert alert-danger" role="alert">
-    Silme işlemi başarısız :(
-</div>
+else if (Model.Status == "UpdateSuccess")
+{
+    <div class="alert alert-success" role="alert">
+        Güncelleme Başarılı
+    </div>
+}
+else if (Model.Status == "DeleteError")
+{
+    <div class="alert alert-success" role="alert">
+        Silme işlemi başarılı
+    </div>
 }
 
 
