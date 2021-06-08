@@ -1,10 +1,11 @@
 var models = [
     {
-        name: "Istanbul",
+        name: "İstanbul",
         url: `https://www.youtube.com/embed/hljZphKH7e0?start=` + Math.floor(Math.random() * 100),
         radio: `https://www.youtube.com/embed/QjjxeaQBtRo`,
         flag: "https://img-uzayspor.mncdn.com/500/turkbayragi.jpg",
         map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d385398.5897809314!2d28.731994487814784!3d41.00498228699284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2zxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1617285522199!5m2!1str!2str"
+
     },
     {
         name: "New York",

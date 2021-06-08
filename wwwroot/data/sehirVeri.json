@@ -1,0 +1,18 @@
+[
+  {
+    "id": 0,
+    "name": "Istanbul",
+    "comments": [
+      "istanbul çok güzel ",
+      "yok deðil"
+    ]
+  },
+  {
+    "id": 1,
+    "name": "New York",
+    "comments": [
+      "iyi be bura",
+      "harbi iyi"
+    ]
+  }
+]

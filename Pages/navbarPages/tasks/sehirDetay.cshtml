@@ -1,0 +1,50 @@
+﻿@page
+@model WorldTravel.Pages.navbarPages.tasks.sehirDetayModel
+@{
+}
+<head>
+    <link rel="stylesheet" href="~/css/aboutUs.css">
+</head>
+
+<!--"id": 2,
+    "projectName": "Abc Project",
+    "projectDescription": "Abc Desc",
+    "img": "",
+    "url": "https://google.com/",
+    "uyes": [ "Ford", "BMW", "Fiat" ]-->
+<div class="main_div bg-dark mt-4">
+    <br>
+    <h1 class="baslik">Şehir Yönetim Sayfası</h1>
+    <hr />
+
+    <form class="form-inline justify-content-center " method="post" asp-page-handler="SearchCityForm">
+        <div class="mt-3">
+            <input class="form-control mr-sm-2" type="search" placeholder="Şehir adı girerek arayın" asp-for="City.name" required>
+            <button class="btn btn-primary my-2 my-sm-0" type="submit">Ara</button>
+        </div>
+
+    </form>
+
+    <form method="post" id="projectForm" class="p-4 mr-3" asp-page-handler="AddCityForm">
+
+        <div class="form-row ">
+
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="ID otomatik atanır." asp-for="City.id" readonly />
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="Proje ismini giriniz." required asp-for="City.name" />
+            </div>
+      
+        </div>
+        <div class="form-row mt-2 mb-2">
+            <textarea class="form-control" id="projecForm" asp-for="CommentList" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success mt-3">Oluştur</button>
+
+
+    </form>
+
+</div>
+
+
