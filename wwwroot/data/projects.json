@@ -12,18 +12,6 @@
     "url": "https://worldtravel.azurewebsites.net/"
   },
   {
-    "id": 2,
-    "projectName": "Abc Project",
-    "projectDescription": "Abc Desc",
-    "members": [
-      "ahmet",
-      "cevdet",
-      "sunay"
-    ],
-    "img": "",
-    "url": "https://google.com/"
-  },
-  {
     "id": 3,
     "projectName": "proje ismi 3",
     "projectDescription": "proje a\u00E7\u0131klamas\u01313",
