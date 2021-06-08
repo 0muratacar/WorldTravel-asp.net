@@ -3,8 +3,8 @@
     "id": 0,
     "name": "Istanbul",
     "comments": [
-      "istanbul çok güzel ",
-      "yok deðil"
+      "istanbul \uFFFDok g\uFFFDzel ",
+      "yok de\uFFFDil"
     ]
   },
   {
@@ -12,7 +12,15 @@
     "name": "New York",
     "comments": [
       "iyi be bura",
-      "harbi iyi"
+      "harbi iyi",
+      "off bu ne be"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Izmir",
+    "comments": [
+      "cennet gibi"
     ]
   }
 ]
