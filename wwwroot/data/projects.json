@@ -12,6 +12,18 @@
     "url": "https://worldtravel.azurewebsites.net/"
   },
   {
+    "id": 2,
+    "projectName": "WorldTravel",
+    "projectDescription": "WT Desc",
+    "members": [
+      "Ford",
+      "BMW",
+      "Fiat"
+    ],
+    "img": "",
+    "url": "https://worldtravel.azurewebsites.net/"
+  },
+  {
     "id": 3,
     "projectName": "proje ismi 3",
     "projectDescription": "proje a\u00E7\u0131klamas\u01313",
