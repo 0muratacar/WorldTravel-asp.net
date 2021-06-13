@@ -16,6 +16,7 @@ namespace WorldTravel.Pages.navbarPages
         public UserDataModel UserData { get; set; }
         public void OnGet()
         {
+            Console.WriteLine("selam");
         }
 
         public IActionResult OnPost()
