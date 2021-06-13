@@ -5,13 +5,13 @@
 <head>
     <link rel="stylesheet" href="~/css/aboutUs.css">
 </head>
+@if (Model.Status == "AddSuccess")
+{
+    <div class="alert alert-success" role="alert">
+        Proje Json Dosyasına Eklendi :)
+    </div>
+}
 
-<!--"id": 2,
-    "projectName": "Abc Project",
-    "projectDescription": "Abc Desc",
-    "img": "",
-    "url": "https://google.com/",
-    "uyes": [ "Ford", "BMW", "Fiat" ]-->
 <div class="main_div bg-dark mt-4">
     <br>
     <h1 class="baslik">Şehir Yönetim Sayfası</h1>
@@ -33,12 +33,22 @@
                 <input type="text" class="form-control" placeholder="ID otomatik atanır." asp-for="City.id" readonly />
             </div>
             <div class="col-3">
-                <input type="text" class="form-control" placeholder="Proje ismini giriniz." required asp-for="City.name" />
+                <input type="text" class="form-control" placeholder="Ülke / Şehir ismini giriniz." required asp-for="City.name" />
             </div>
-      
+
         </div>
         <div class="form-row mt-2 mb-2">
-            <textarea class="form-control" id="projecForm" asp-for="CommentList" rows="4"></textarea>
+            <p>Genel Yorum</p>
+            <textarea class="form-control mb-3"  asp-for="CommentList" rows="4"></textarea>
+            <p>Beğendiğiniz mekanlar</p>
+            <textarea class="form-control mb-3"  asp-for="LocationList" rows="4"></textarea>
+            <p>Beğendiğiniz yiyecek içecekler</p>
+            <textarea class="form-control mb-3"  asp-for="FoodList" rows="4"></textarea>
+            @*<a href="@Model.City.photoUrl">
+                    <img src="" class="img-fluid" alt="Responsive image">
+
+                </a>*@
+
         </div>
         <button type="submit" class="btn btn-success mt-3">Oluştur</button>
 

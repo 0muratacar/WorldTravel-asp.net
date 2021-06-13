@@ -9,7 +9,9 @@ namespace WorldTravel.Models
     {
         public int id { get; set; }
         public string name { get; set; }
-        public string photoURl { get; set; }
+        public string photoUrl { get; set; }
         public string[] comments { get; set; }
+        public string[] favoriFoods { get; set; }
+        public string[] favoriLocations { get; set; }
     }
 }

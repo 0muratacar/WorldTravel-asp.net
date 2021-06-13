@@ -1,0 +1,101 @@
+﻿@page
+@model WorldTravel.Pages.navbarPages.ShowCityModel
+@{
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/aboutUs.css">
+    <script src="~/js/site.js"></script>
+</head>
+
+@if (Model.Status == "AddSuccess")
+{
+    <div class="alert alert-success" role="alert">
+        Proje Json Dosyasına Eklendi :)
+    </div>
+}
+else if (Model.Status == "UpdateSuccess")
+{
+    <div class="alert alert-success" role="alert">
+        Güncelleme Başarılı
+    </div>
+}
+@*else if (Model.Status == "DeleteError")
+{
+    <div class="alert alert-success" role="alert">
+        Silme işlemi başarılı
+    </div>
+}*@
+
+
+<div class="main_div bg-dark">
+    <h1 class="baslik"> Json dosyası işleme </h1>
+    <hr />
+
+    <div class="card-group justify-content-center">
+        @foreach (var city in Model.Cities)
+        {
+            @if (city.id != 0)
+            {
+                <div class="card bg-info m-3">
+                    <div class="card-header">Ülke Adı: @city.name</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Ülke id: @city.id</h5>
+
+                        <img class="img-fluid" src="@city.photoUrl" alt="City-Photo" />
+                    </div>
+                    <div class="card-footer">
+                        <ul class="list-group mb-2">
+                            <p style="color:black">Yorumlar</p>
+                            @if (city.comments != null)
+                            {
+                                @foreach (string comment in city.comments)
+                                {
+                                    <div class="border-danger">
+                                        <li class="list-group ">@comment</li>
+                                    </div>
+                                }
+                            }
+
+
+
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <ul class="list-group">
+                            <p style="color:black">Favori Mekanlar</p>
+                            @if (city.favoriLocations != null)
+                            {
+                                @foreach (string location in city.favoriLocations)
+                                {
+                                    <li class="list-group">@location</li>
+                                }
+                            }
+
+
+
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <ul class="list-group">
+                            <p style="color:black">Favori Yemekler</p>
+                            @if (city.favoriFoods != null)
+                            {
+                                @foreach (string food in city.favoriFoods)
+                                {
+                                    <li class="list-group">@food</li>
+                                }
+                            }
+
+
+
+                        </ul>
+                    </div>
+                </div>
+            }
+
+        }
+    </div>
+
+
+</div>

@@ -17,22 +17,51 @@ namespace WorldTravel.Pages.navbarPages.tasks
             JsonCityService = jsoncityservice;
         }
 
+        [BindProperty(SupportsGet = true)]
+        public string Status { get; set; }
+
         [BindProperty]
         public CityModel City { get; set; }
 
         [BindProperty]
         public string CommentList { get; set; }
+        [BindProperty]
+        public string FoodList { get; set; }
+        [BindProperty]
+        public string LocationList { get; set; }
+        [BindProperty]
+        public string PhotoUrl { get; set; }
+
         public void OnGet()
         {
         }
-
+        
         public void OnPostSearchCityForm()
         {
+             var d= JsonCityService.GetCity();
             // Jsonda olmayan bir isim gelince patlýyor. Yoksa Çalýþýyor.
             City = JsonCityService.GetCityByName(City.name);
+            /*
+             * for döngüsü ile City.name =? sehirveri.json içindeki name isimleriyle
+             * eþleþirse statu 1
+             * else 0;
+             *
+             */
+            
+            //foreach (string names in d)
+            //{
+                
+            //};
             if (City.name != null)
             {
                 CommentList = listtostring(City.comments);
+                FoodList = listtostring(City.favoriFoods);
+                LocationList = listtostring(City.favoriLocations);
+            }
+            else
+            {
+                Console.WriteLine("Þehir bulunamadý");
+                //return RedirectToPage("/NavbarPages/sehirDetay", new { Status = "no" });
             }
         }
 
@@ -40,16 +69,18 @@ namespace WorldTravel.Pages.navbarPages.tasks
         public IActionResult OnPostAddCityForm()
         {
             City.comments = stringtolist(CommentList);
+            City.favoriLocations = stringtolist(LocationList);
+            City.favoriFoods = stringtolist(FoodList);
             if (City.id == 0)
             {
                 JsonCityService.AddCity(City);
-                return RedirectToPage("/NavbarPages/tasks/week11", new { Status = "AddSuccess" });
+                return RedirectToPage("/NavbarPages/ShowCity", new { Status = "AddSuccess" });
 
             }
             else
             {
                 JsonCityService.UpdateCity(City);
-                return RedirectToPage("/NavbarPages/tasks/week11", new { Status = "UpdateSuccess" });
+                return RedirectToPage("/NavbarPages/ShowCity", new { Status = "UpdateSuccess" });
 
             }
 

@@ -2,45 +2,82 @@
   {
     "id": 0,
     "name": "",
-    "photoURl": "",
+    "photoUrl": "",
     "comments": [
+      ""
+    ],
+    "favoriFoods": [
+      ""
+    ],
+    "favoriLocations": [
       ""
     ]
   },
   {
     "id": 1,
     "name": "New York",
-    "photoURl": "",
+    "photoUrl": "https://cdn.turkishairlines.com/m/157e27aba7dc4632/original/Travel-Guide-of-New-York-via-Turkish-Airlines.jpg",
     "comments": [
       "iyi be bura",
       "harbi iyi",
       "off bu ne be"
+    ],
+    "favoriFoods": [
+      ""
+    ],
+    "favoriLocations": [
+      ""
     ]
   },
   {
     "id": 2,
     "name": "Izmir",
-    "photoURl": "",
+    "photoUrl": "https://cdn.turkishairlines.com/m/10a856c4ec2102c9/original/Travel-Guide-of-Izmir-via-Turkish-Airlines.jpg",
     "comments": [
       "cennet gibi",
       "evet oyle"
+    ],
+    "favoriFoods": [
+      ""
+    ],
+    "favoriLocations": [
+      ""
     ]
   },
   {
     "id": 3,
     "name": "Istanbul",
-    "photoURl": "",
+    "photoUrl": "https://cdn.turkishairlines.com/m/46da0371076f60e0/original/Travel-Guide-of-Istanbul-via-Turkish-Airlines.jpg",
     "comments": [
       "istanbul \uFFFDok g\uFFFDzel ",
+      ""
+    ],
+    "favoriFoods": [
+      ""
+    ],
+    "favoriLocations": [
       ""
     ]
   },
   {
     "id": 4,
     "name": "London",
-    "photoURl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall_%28cropped%29.jpg/1000px-Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall_%28cropped%29.jpg",
+    "photoUrl": null,
     "comments": [
-      "Londrada gece guzel"
+      "Londrada gece guzel",
+      "Londrada hayat guzel",
+      ""
+    ],
+    "favoriFoods": [
+      "hamburger",
+      "cips",
+      "kaktuss",
+      "selamm",
+      "be"
+    ],
+    "favoriLocations": [
+      "sahil",
+      "merkez camii"
     ]
   }
 ]
