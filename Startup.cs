@@ -1,3 +1,5 @@
+using city.data.Abstract;
+using city.data.Concrete;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -31,7 +33,9 @@ namespace WorldTravel
             services.AddTransient<JsonWikiService>();
             services.AddTransient<JsonProjectService>();
             services.AddTransient<JsonCityService>();
-            services.AddControllers();  
+            services.AddScoped<IUser, UserRepository>();
+
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

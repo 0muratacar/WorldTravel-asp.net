@@ -1,11 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace WorldTravel.Models
+namespace city.entity
 {
-    public class UserDataModel
+    public class User
     {
         public int id { get; set; }
         public string name { get; set; }
@@ -15,5 +13,8 @@ namespace WorldTravel.Models
         public string ilce { get; set; }
         public string posta_kodu { get; set; }
         public string adres { get; set; }
+
+
+
     }
 }

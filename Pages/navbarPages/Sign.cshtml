@@ -19,32 +19,32 @@
                 <!--menü için control space yap-->
                 <!--kullanicidan kayit aldııgm ekran-->
                 <div class="col">
-                    <input type="text" class="form-control" placeholder="Ad giriniz." required asp-for="UserData.Ad" />
+                    <input type="text" class="form-control" placeholder="Ad giriniz." required asp-for="UserData.name" />
                 </div>
                 <div class="col">
-                    <input type="text" class="form-control" placeholder="Soyad giriniz." required asp-for="UserData.Soyad" />
+                    <input type="text" class="form-control" placeholder="Soyad giriniz." required asp-for="UserData.surname" />
                 </div>
                 <div class="col">
-                    <input type="email" class="form-control" placeholder="E-posta adresi giriniz." required asp-for="UserData.Eposta" />
+                    <input type="email" class="form-control" placeholder="E-posta adresi giriniz." required asp-for="UserData.eposta" />
                     <div id="emailHelp" class="form-text" style="color:white">E-postanızı asla başkalarıyla paylaşmayacağız.</div>
                 </div>
             </div>
 
             <div class="form-row p-3 mr-2">
                 <div class="col">
-                    <input type="text" class="form-control" placeholder="İl giriniz." required asp-for="UserData.Address.Il" />
+                    <input type="text" class="form-control" placeholder="İl giriniz." required asp-for="UserData.il" />
                 </div>
                 <div class="col">
-                    <input type="text" class="form-control" placeholder="İlçe giriniz." required asp-for="UserData.Address.Ilce" />
+                    <input type="text" class="form-control" placeholder="İlçe giriniz." required asp-for="UserData.ilce" />
                 </div>
                 <div class="col">
-                    <input type="text" class="form-control" placeholder="Posta Kodu giriniz." asp-for="UserData.Address.PostaKodu" />
+                    <input type="text" class="form-control" placeholder="Posta Kodu giriniz." asp-for="UserData.posta_kodu" />
                 </div>
             </div>
             <div class="form-row p-3 mr-2">
 
                 <div class="col-md-12">
-                    <input type="text" class="form-control" placeholder="Detaylı Adres Giriniz." required asp-for="UserData.Address.Detay" />
+                    <input type="text" class="form-control" placeholder="Detaylı Adres Giriniz." required asp-for="UserData.adres" />
                 </div>
             </div>
             <div class="col mb-3 mt-3">
