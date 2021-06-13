@@ -1,6 +1,7 @@
 for (let index = 0; index < models.length; index++) {
     document.getElementById("sect").innerHTML += `
-    <div class="mt-3 mx-3 place" id="`+ index + `" style="width: 7%;height:70px;display:inline-block;background-image:url('https://upload.wikimedia.org/wikipedia/commons/c/c9/Flag-map_of_the_world_%281900%29.png');background-size:100% 70px;background-position:top;background-repeat :no-repeat;border-radius:5px;box-shadow: 5px 10px 20px rgb(94, 9, 9) inset;"></div> 
+    <div class="mt-3 mx-3 place" id="`+ index + `" style="width: 7%;height:70px;display:inline-block;background-image:url('https://upload.wikimedia.org/wikipedia/commons/c/c9/Flag-map_of_the_world_%281900%29.png');background-size:100% 70px;background-position:top;background-repeat :no-repeat;border-radius:5px;box-shadow: 5px 10px 20px rgb(94, 9, 9) inset;">
+    </div> 
 
     `;
 

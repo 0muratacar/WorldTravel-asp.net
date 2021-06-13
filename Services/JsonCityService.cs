@@ -63,6 +63,7 @@ namespace WorldTravel.Services
                 );
         }
 
+        // Şuanlık ID'ye göre değil Name değişkenine göre arama yaptırıyoruz.
         public CityModel GetCityById(int id)
         {
             var project = GetCity();
