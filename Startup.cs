@@ -30,9 +30,15 @@ namespace WorldTravel
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            // Wikipedia aramasý için yazýlan API servise eklendi.
             services.AddTransient<JsonWikiService>();
+
             services.AddTransient<JsonProjectService>();
+
+            // Þehirleri iþleyen servis
             services.AddTransient<JsonCityService>();
+
+            // IUser nesnesi çalýþtýrýldýðýnda UserRepository içerisindeki metotlarý çalýþtýran servis
             services.AddScoped<IUser, UserRepository>();
 
             services.AddControllers();

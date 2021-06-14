@@ -7,6 +7,8 @@ namespace WorldTravel.Models
 {
     public class UserDataModel
     {
+
+        // Eklenen kullanıcıların bilgilerinin tutulduğu bölüm
         public int id { get; set; }
         public string name { get; set; }
         public string surname { get; set; }

@@ -9,7 +9,7 @@ using city.data.Concrete;
 namespace city.data.Migrations
 {
     [DbContext(typeof(database))]
-    [Migration("20210614102359_Migrate")]
+    [Migration("20210614120017_Migrate")]
     partial class Migrate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

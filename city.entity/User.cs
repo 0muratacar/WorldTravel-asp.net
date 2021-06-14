@@ -5,6 +5,8 @@ namespace city.entity
 {
     public class User
     {
+
+        // User tablosu içerisindeki veriler
         public int id { get; set; }
         public string name { get; set; }
         public string surname { get; set; }

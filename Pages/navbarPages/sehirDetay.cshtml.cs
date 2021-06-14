@@ -89,6 +89,9 @@ namespace WorldTravel.Pages.navbarPages.tasks
 
         }
 
+
+        // Json dosyasý okuma iþlemi için gelen listedeki verileri Array yapýsýna, Array yapýsýný list yapýsýna çevirme fonksiyonlarý
+        // Bu sayede textarea nýn kabul ettiði formatta iþlem yapýlmýþ oldu.
         public string[] stringtolist(string CommentList)
         {
             if (CommentList != null)
@@ -105,31 +108,3 @@ namespace WorldTravel.Pages.navbarPages.tasks
     }
 }
 
-
-//namespace WorldTravel.Pages.navbarPages.tasks
-//{
-//    public class week11AdModel : PageModel
-//    {
-
-
-
-
-//        public IActionResult OnPostDeleteProjectByID()
-//        {
-//            if (Proje.id != 0)
-//            {
-//                JsonProjectService.DeleteProject(Proje.id);
-//                return RedirectToPage("/NavbarPages/tasks/week11", new { Status = "DeleteError" });
-
-//            }
-//            else
-//            {
-//                return RedirectToPage("/NavbarPages/tasks/week11", new { Status = true });
-//            }
-
-
-//        }
-
-
-//    }
-//}

@@ -88,10 +88,25 @@
       "\u0130yii"
     ],
     "favoriFoods": [
-      "Kebap"
+      "Kebap",
+      "lahmacun"
     ],
     "favoriLocations": [
       "Eyfel Kulesi"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Dubai",
+    "photoUrl": "https://cdn.turkishairlines.com/m/4ca50ae8620170ff/original/Travel-Guide-of-Dubai-via-Turkish-Airlines.jpg",
+    "comments": [
+      "Dubai iste"
+    ],
+    "favoriFoods": [
+      "beton"
+    ],
+    "favoriLocations": [
+      "bina"
     ]
   }
 ]

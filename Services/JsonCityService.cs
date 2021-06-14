@@ -17,12 +17,15 @@ namespace WorldTravel.Services
         }
         public IWebHostEnvironment WebHostEnvironment { get; }
 
+        // Serverdeki Json dosyasının ismini ve yolunu alır
         public string JsonFileName
         {
 
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "sehirVeri.json"); }
 
         }
+
+        // GetCity() fonksiyonu bize json dosyasındaki verileri okunabilir halde döndürür.
         public IEnumerable<CityModel> GetCity()
         {
             using var json = File.OpenText(JsonFileName);
@@ -35,7 +38,8 @@ namespace WorldTravel.Services
 
 
 
-
+        // Şehir ekleme fonksiyonu için kullanılır. Tüm şehirleri alıp şehir id'si linq yapısı ile son eklenen şehrin id'sinin bir fazlası olarak atanır.
+        // Yeni proje listeye ekleniyor ve serialize edilir
         public void AddCity(CityModel newproject)
         {
             var projects = GetCity();
@@ -71,6 +75,8 @@ namespace WorldTravel.Services
             CityModel query = project.FirstOrDefault(x => x.id == id);
             return query;
         }
+       
+        // Şehir adına göre arama yapılarak aranan şehir linq yapısı ile bu query döndürülüyor.
         public CityModel GetCityByName(string name)
         {
             var project = GetCity();
@@ -79,6 +85,7 @@ namespace WorldTravel.Services
             return query;
         }
 
+        // Şehir güncelleme fonksiyonu. Aranan şehir adına göre ekleme veya silme işlemleri yapılarak dosyaya yazılıyor.
         public void UpdateCity(CityModel newproject)
         {
             var project = GetCity();

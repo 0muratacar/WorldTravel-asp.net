@@ -19,6 +19,7 @@ namespace WorldTravel.Models
 
     public class pageval
     {
+        // Gelen linkin verilerini ayrıştırırken kullandığımız değişkenler bu modelde tutuluyor.
         public int pageid { get; set; }
         public int ns { get; set; }
         public string title { get; set; }

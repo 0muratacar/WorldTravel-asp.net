@@ -12,6 +12,8 @@ namespace WorldTravel.Pages.navbarPages
 {
 
     public class SignUpModel : PageModel
+
+
     {
         [BindProperty(SupportsGet = true)]
         public string Name { get; set; }
@@ -19,9 +21,11 @@ namespace WorldTravel.Pages.navbarPages
         [BindProperty(SupportsGet = true)]
         public string Surname { get; set; }
 
+
+        // User repositorye baðlamak için bir nesne oluþturuldu.
         IUser _user;
 
-
+        // Constructer her çalýþtýðýnda nesne oluþturuluyor.
         public SignUpModel(IUser user){
             _user=user;
         }
@@ -30,6 +34,7 @@ namespace WorldTravel.Pages.navbarPages
 
         [BindProperty]
         public UserDataModel UserData { get; set; }
+
         public void OnGet()
         {
             if (string.IsNullOrWhiteSpace(Name))
@@ -39,7 +44,7 @@ namespace WorldTravel.Pages.navbarPages
 
         }
 
-
+        // Girilen deðerlere alýnýp new_user adlý User nesneye atanýp, Bu veri veritabanýna IUser nesnesi ile kaydediliyor.
         public IActionResult OnPost()
         {
         

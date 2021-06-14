@@ -7,6 +7,7 @@ namespace WorldTravel.Models
 {
     public class CityModel
     {
+        // Json dosyasındaki şehir bilgilerini tutmak için oluşturuldu.
         public int id { get; set; }
         public string name { get; set; }
         public string photoUrl { get; set; }
