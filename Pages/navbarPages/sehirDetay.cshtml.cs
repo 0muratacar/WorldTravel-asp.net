@@ -25,10 +25,13 @@ namespace WorldTravel.Pages.navbarPages.tasks
 
         [BindProperty]
         public string CommentList { get; set; }
+
         [BindProperty]
         public string FoodList { get; set; }
+
         [BindProperty]
         public string LocationList { get; set; }
+
         [BindProperty]
         public string PhotoUrl { get; set; }
 
