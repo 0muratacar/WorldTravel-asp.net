@@ -9,7 +9,7 @@ namespace city.data.Concrete
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=cityDB");
+            optionsBuilder.UseSqlServer("Server=tcp:worldtravel.database.windows.net,1433;Initial Catalog=worldtravelDB;Persist Security Info=False;User ID=worldtravel;Password='Mehmetnurmurat1';MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         }
     }
 }
