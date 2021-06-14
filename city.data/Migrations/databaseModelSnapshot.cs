@@ -40,6 +40,9 @@ namespace city.data.Migrations
                     b.Property<string>("name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("password")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("posta_kodu")
                         .HasColumnType("nvarchar(max)");
 

@@ -49,20 +49,20 @@
     "name": "Istanbul",
     "photoUrl": "https://cdn.turkishairlines.com/m/46da0371076f60e0/original/Travel-Guide-of-Istanbul-via-Turkish-Airlines.jpg",
     "comments": [
-      "istanbul \uFFFDok g\uFFFDzel ",
+      "istanbul cok guzel ",
       ""
     ],
     "favoriFoods": [
-      ""
+      "Kumpir"
     ],
     "favoriLocations": [
-      ""
+      "Kiz kulesi"
     ]
   },
   {
     "id": 4,
     "name": "London",
-    "photoUrl": null,
+    "photoUrl": "https://cdn.turkishairlines.com/m/107729e6ed3416/original/Travel-Guide-of-London-via-Turkish-Airlines.jpg",
     "comments": [
       "Londrada gece guzel",
       "Londrada hayat guzel",
@@ -78,6 +78,20 @@
     "favoriLocations": [
       "sahil",
       "merkez camii"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Paris",
+    "photoUrl": "https://cdn.turkishairlines.com/m/536e8df8c381e006/original/Travel-Guide-of-Paris-via-Turkish-Airlines.jpg",
+    "comments": [
+      "\u0130yii"
+    ],
+    "favoriFoods": [
+      "Kebap"
+    ],
+    "favoriLocations": [
+      "Eyfel Kulesi"
     ]
   }
 ]

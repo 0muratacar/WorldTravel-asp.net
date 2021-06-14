@@ -2,7 +2,7 @@
 
 namespace city.data.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class Migrate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,6 +15,7 @@ namespace city.data.Migrations
                     name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     surname = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     eposta = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    password = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     il = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ilce = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     posta_kodu = table.Column<string>(type: "nvarchar(max)", nullable: true),

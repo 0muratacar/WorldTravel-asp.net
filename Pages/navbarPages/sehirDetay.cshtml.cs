@@ -32,8 +32,8 @@ namespace WorldTravel.Pages.navbarPages.tasks
         [BindProperty]
         public string LocationList { get; set; }
 
-        [BindProperty]
-        public string PhotoUrl { get; set; }
+        
+        
 
         public void OnGet()
         {

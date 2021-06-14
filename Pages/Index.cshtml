@@ -9,9 +9,24 @@
 </head>
 
 <div id="sect" class="ml-5">
-    <h2 style="text-align:center">@Model.Name @Model.Surname</h2>
+    <div class="alert">
+        @if (Model.Name != "")
+        {
+            <h2 style="text-align:center">Hoşgeldiniz @Model.Name</h2>
+        }
+    </div>
+
 </div>
 
 <script src="~/js/data.js"></script>
 <script src="~/js/script.js"></script>
 
+<script>
+    
+    window.setTimeout(function () {
+        $(".alert").fadeTo(500, 0).slideUp(500, function () {
+
+        });
+    }, 25000);
+
+</script>

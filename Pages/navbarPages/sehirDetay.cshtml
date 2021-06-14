@@ -38,16 +38,15 @@
 
         </div>
         <div class="form-row mt-2 mb-2">
-            <p>Genel Yorum</p>
-            <textarea class="form-control mb-3"  asp-for="CommentList" rows="4"></textarea>
-            <p>Beğendiğiniz mekanlar</p>
-            <textarea class="form-control mb-3"  asp-for="LocationList" rows="4"></textarea>
-            <p>Beğendiğiniz yiyecek içecekler</p>
-            <textarea class="form-control mb-3"  asp-for="FoodList" rows="4"></textarea>
-            @*<a href="@Model.City.photoUrl">
-                    <img src="" class="img-fluid" alt="Responsive image">
+            <p>Genel Yorum:</p>
+            <textarea class="form-control mb-3" asp-for="CommentList" rows="4"></textarea>
+            <p>Beğendiğiniz mekanlar:</p>
+            <textarea class="form-control mb-3" asp-for="LocationList" rows="4"></textarea>
+            <p>Beğendiğiniz yiyecek içecekler:</p>
+            <textarea class="form-control mb-3" asp-for="FoodList" rows="4"></textarea>
+            <p>Kapak fotoğrafı URL:</p>
+            <textarea class="form-control mb-3" asp-for="City.photoUrl" rows="1"></textarea>
 
-                </a>*@
 
         </div>
         <button type="submit" class="btn btn-success mt-3">Oluştur</button>

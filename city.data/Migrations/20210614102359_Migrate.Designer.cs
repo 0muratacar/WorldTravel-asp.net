@@ -9,8 +9,8 @@ using city.data.Concrete;
 namespace city.data.Migrations
 {
     [DbContext(typeof(database))]
-    [Migration("20210614074229_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20210614102359_Migrate")]
+    partial class Migrate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -40,6 +40,9 @@ namespace city.data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("password")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("posta_kodu")
